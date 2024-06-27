@@ -13,8 +13,8 @@ public class PeopleReader {
 
     public List<Person> getAllPeople() throws IOException {
         List<Person> people = new ArrayList<>();
-
         List<String> lines = Files.readAllLines(Path.of(filename));
+
         for (String line : lines) {
             people.add(new Person(line));
         }
